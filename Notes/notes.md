@@ -523,8 +523,7 @@ Reto
 
 ![image](https://user-images.githubusercontent.com/90301902/188478697-8dba44a3-3a29-4b1a-a69e-ff847be30621.png)
 
-posible ejemplo
-![image](https://user-images.githubusercontent.com/90301902/188478777-94eddde3-053b-4bec-ad47-b0e7942053d6.png)
+
 
 
 ### Clase 9 Tipos de Datos
