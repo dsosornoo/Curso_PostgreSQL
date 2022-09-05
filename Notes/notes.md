@@ -260,6 +260,16 @@ En la parte del Admin en Server podemos crear una base de datos  desde cero a pa
 
 ![pgadmin_3](src/pgadmin_3.jpg)
 
+Cats traduccion de tipos de datos explicito
+Catalogs para catalogar la informacion subdirectorio de tablas
+Event Triggers ejecutas funciones con base en acciones que suceden en la base de datos
+Extensions para instalar modulos de terceros
+Foreign Data Wrippers acceso bases de datos remoto
+Languajes tipos de datos diferentes 
+Schema permite informacion propia de la tabla
+
+
+
 ![pgadmin_4](src/pgadmin_4.jpg)
 
 Podemos usar en el menu de  tools el Query tools
