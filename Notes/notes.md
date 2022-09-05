@@ -152,18 +152,18 @@ También vamos a buscar la consola… Tanto la consola como PgAdmin son útiles 
 
 En el menú de Windows (o donde aparecen instalados todos los programas) buscamos “PgAdmin…”
 
-![postgre_instal_0](src/postgre_instal_0.jpg)
+![image](https://user-images.githubusercontent.com/90301902/188466424-d8fd8071-0b56-4987-9568-1ef9bface555.png)
 
 Ahora buscamos “SQL Shell…”
 
-![postgre_instal_1](src/postgre_instal_1.jpg)
+![image](https://user-images.githubusercontent.com/90301902/188466446-cf3a4295-8812-49d9-a16e-c7aedfe38a36.png)
 
 Efectivamente, ahora aparecen las herramientas que vamos a utilizar en éste curso.
 Ahora vamos a crear una base de datos de prueba usando la consola y comprobaremos si existe usando PgAdmin, la crearemos para validar que la conexión con el servicio de base de datos interno funciona correctamente.
 
 Para ello abrimos la consola, buscamos SQL Shell y lo ejecutamos. Veremos algo así:
 
-![postgre_instal_2](src/postgre_instal_2.jpg)
+![image](https://user-images.githubusercontent.com/90301902/188466475-b57d6dbd-6309-48bd-88d4-da3493e67e7d.png)
 
 Lo que vemos en pantalla es la consola esperando que ingresemos cada parámetro para la conexión.
 
@@ -171,7 +171,7 @@ Primero está el nombre del parámetro. En éste caso es “Server” seguido de
 
 Podemos dejar todos los valores predeterminados (presionando “Enter”) hasta que la consola pregunte por la clave del usuario maestro:
 
-![postgre_instal_3](src/postgre_instal_3.jpg)
+![image](https://user-images.githubusercontent.com/90301902/188466500-a3e65cde-6bac-46b2-af48-cbd0e57fd510.png)
 
 Debemos ingresar la clave que usamos cuando estábamos instalando Postgres, de lo contrario no podremos acceder. Presionamos Enter y veremos a continuación una pantalla que nos indica que estamos logueados en la base de datos y estamos listos para hacer modificaciones.
 
@@ -179,31 +179,30 @@ De manera predeterminada, la base de datos instalada es Postgres, la cual no deb
 
 La siguiente imagen indica que estamos conectados a la base de datos Postgres. Vamos a crear una base de datos nueva y luego saltar el cursor a ésta base de datos recién creada.
 
-![postgre_instal_4](src/postgre_instal_4.jpg)
-
+![image](https://user-images.githubusercontent.com/90301902/188466515-cceba838-03c6-4519-a988-8f5b0e0f7232.png)
 Para ello escribimos el comando “**CREATE DATABASE transporte_publico;**” y presionamos “Enter”. Veremos:
 
-![postgre_instal_5](src/postgre_instal_5.jpg)
+![image](https://user-images.githubusercontent.com/90301902/188466549-7570469b-531d-4a16-9756-58a3de947430.png)
 
 El mensaje **“CREATE DATABASE”** justo después de la línea que acabamos de escribir indica que la base de datos fue creada correctamente.
 
 Para saltar a la base de datos recién creada ejecutamos el comando “**\c transporte_publico**”, el cursor mostrará lo siguiente:
 
-![postgre_instal_6](src/postgre_instal_6.jpg)
+![image](https://user-images.githubusercontent.com/90301902/188466587-e84375cb-0c65-4148-bfc8-8de023158527.png)
 
 Ahora vamos a validar desde PgAdmin que la base de datos fué creada correctamente. Abrimos PgAdmin y nos encontramos con una lista de items a la izquierda, lo que significa que de manera predeterminada PgAdmin ha creado un acceso a nuestra base de datos local, el cual llamó “PostgreSQL”:
 
-![postgre_instal_7](src/postgre_instal_7.jpg)
+![image](https://user-images.githubusercontent.com/90301902/188466616-2e20fd11-ce2d-47fd-8e9e-50072f048549.png)
 
 Al hacer hacer doble clic sobre éste elemento (“PostgreSQL”) nos pedirá ingresar la clave que hemos determinado para el super usuario postgres, al igual que la consola, hasta no ingresarla correctamente no nos podremos conectar:
 
-![postgre_instal_8](src/postgre_instal_8.jpg)
+![image](https://user-images.githubusercontent.com/90301902/188466643-451cf0db-3411-436a-bc61-0b0102a2cc95.png)
 
 Ingresamos la clave. Te recomiendo seleccionar la opción “Save Password” o “Guardar Contraseña”. Si la máquina sobre la que estás trabajando es de confianza, que seas sólo tú o tu equipo quien tenga acceso a ella, de lo contrario, no guardes la contraseña para mantenerla segura.
 
 Veremos la lista de bases de datos disponibles, la predeterminada “postgres” y la que acabamos de crear usando la consola, lo que comprueba que la base de datos y la consola funcionan correctamente.
 
-![postgre_instal_9](src/postgre_instal_9.jpg)
+![image](https://user-images.githubusercontent.com/90301902/188466679-270becff-a7b9-4154-8ee6-8b8f7f469faf.png)
 
 Ahora procedemos a eliminar la base de datos recién creada para comprobar que PgAdmin está correctamente configurada y si pueda realizar cambios sobre la base de datos.
 
