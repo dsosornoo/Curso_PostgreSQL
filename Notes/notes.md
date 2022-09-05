@@ -278,6 +278,33 @@ Podemos usar en el menu de  tools el Query tools
 
 ![pgadmin_6](src/pgadmin_6.jpg)
 
+
+La interfaz de PgAdmin nos permite ver de manera grafica muchísima información referente a nuestras bases de datos, acá veremos un breve resumen de las diferentes opciones que nos ofrece.
+
+En Servers, si le damos clic derecho, podemos crear nuestra propia consulta de base de datos al servidor, pero con opciones nuevas propias de la interfaz grafica como definir un color de resaltado con el cual identificar nuestra consulta, y darle un nombre a nuestra conexión para identificarla. Ademas podemos al igual que con el Shell definir todas las opciones de conexión como el host, puerto, nombre de usuario, password, etc.
+
+La conexión en PgAdmin nos permite verla de manera grafica en forma de árbol donde tenemos en el primer nivel; las bases de datos, los usuarios que se pueden conectar a las mismas y los Tablespaces que son espacios físicos donde guardar nuestros datos.
+
+En la base de datos tenemos ademas un segundo nivel donde podemos ver todas las opciones que tiene nuestra base de datos y que en el shell tendríamos que visualizar y acceder a través de comandos:
+
+• Casts: Que es para hacer traducción de tipos de datos explicito.
+• Catalogs: Para catalogar la información, como una especie de subdirectorio de tablas.
+• Event Triggers: En un apartado donde podremos ejecutar funciones en base a acciones que pasan en la base de datos.
+• Extension: Nos servirá para instalar módulos desarrollados por terceros para nuestra base de datos.
+• Foreign Data Wrappers: Es acceso a base de datos remoto.
+• Languages: Hace referencia a los lenguajes de programación que puedes usar dentro de la base de datos.
+• Schemas: Nos permite ver la información propia de las tablas de nuestra base de datos.
+
+Ademas PgAdmin nos permite ver en tiempo real informacion de lo que sucede con nuestra base de datos, al hacer clic en “Databases” nos mostrara en el panel a la derecha una ventana con distintas pestañas:
+
+• Dashboard: Nos muestra las conexiones simultaneas, las transacciones, lo que esta escribiendo, lo que esta leyendo, lo que esta borrando. En la parte inferior en “server activity” podemos ver las funciones que se estan ejecutando para la base de datos que estamos visualizando.
+• Properties: Nos muestra las propiedades de nuestra DB, como los tipos de datos, el dueño de la base de datos.
+• Statistics: Nos mostrara datos estadísticos de nuestra DB.
+• Dependencies: Nos enseña las dependencias que tenga nuestra base de datos.
+
+Igualmente podemos ejecutar consultas SQL en PgAdmin, posicionandonos en la base de datos donde queremos realizarlas y seleccionando en la opción del menú superior Tools, Query Tool.
+
+
 ### Clase 6 Archivos de Configuracion
 
 Antes de crear tablas o hacer diseños es importante conocer 3 archivos de configuracion que muchas veces son el origen de los problemas cuando estamos agregando nuevos servicios o configurando la base de datos
