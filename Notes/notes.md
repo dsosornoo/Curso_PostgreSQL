@@ -306,20 +306,58 @@ Igualmente podemos ejecutar consultas SQL en PgAdmin, posicionandonos en la base
 
 
 ### Clase 6 Archivos de Configuracion
+![image](https://user-images.githubusercontent.com/90301902/188476381-4be45da5-afd9-40a2-986f-fa45fa66737b.png)
+Postgres.conf
+.
+Lo mejor es leer todo el documento para saber que parámetros podemos modificar y la configuración actual. Si un valor está comentado con el símbolo de gato(#), significa que es el valor predeterminado. Si lo quiero cambiar hay que quitar el # para desconectarlo y modificarlo.
+.
+Importante: reiniciar el programa(base de datos), para aplicar los cambios.
+.
 
-Antes de crear tablas o hacer diseños es importante conocer 3 archivos de configuracion que muchas veces son el origen de los problemas cuando estamos agregando nuevos servicios o configurando la base de datos
+Replicación en PostgreSQL
+.
+Uno de los métodos más usados para conseguir la Alta disponibilidad en nuestro servidor Postgres es implementar la Replicación. Con ello nos aseguramos que nuestro sistema esté activo el 99,9% del año. Replicas en “version and platform compatibility”.
+.
 
-Los archivos de configuración son tres principales:
+¿Qué es la Replicación?
+.
+Es la transmisión de información derivada de las operaciones DML de una Base de Datos a otra, es decir, se transmite a otra Base de Datos las instrucciones INSERT, UPDATE y DELETE que se realicen en una Base de datos de forma que ambas BBDD tengan la misma información, así pues, se obtiene una redundancia de datos.
+.
 
-- **postgreql.conf**: en este archivo podemos cambiar puerto, numero de conexiones maxima, accesos para ip únicas. (un pro en bases de datos siempre ha leído todo el documento). En este archivo también se encuentra la información de las replicas
+Pg_hba.conf
+.
+Permite proteger las conexiones por roles. Muestra los roles y los tipos de acceso que tiene con la base de datos. Muestra y puede configurar:
+.
+|> Type <|> Database <|> User <|> Address <|> Method <|
+…host … . . . . All . . . . . . . All . . .127.0.0.1/32 . . . md5
+.
+Esta configuración permite todas las conexiones a todas las bases de datos locales dentro del equipo por md5.
+.
+MD5
+.
+El método md5 utiliza un mecanismo de desafío-respuesta personalizado menos seguro. Evita el rastreo de contraseñas y evita el almacenamiento de contraseñas en el servidor en texto sin formato, pero no brinda protección si un atacante logra robar el hash de la contraseña del servidor. Además, el algoritmo hash MD5 ya no se considera seguro contra determinados ataques.
+.
+El método md5 no se puede utilizar con la función db_user_namespace.
+.
+Para facilitar la transición del método md5 al método SCRAM más nuevo, si md5 se especifica como método en pg_hba.conf pero la contraseña del usuario en el servidor está encriptada para SCRAM (ver más abajo), entonces se elegirá automáticamente la autenticación basada en SCRAM. .
+.
 
-- **pg.hba.conf**: contiene los roles, tipos de usuarios, permisos, direcciones, métodos de acceso con MD5, también puedo negar a otros hosts a conectarnos,este archivo es muy importante dado que nos permite no solo dar acceso a usuarios y a las replicas sino protegernos de ataques o personas mal intencionados
+Replicación en PostgreSQL
+.
+Uno de los métodos más usados para conseguir la Alta disponibilidad en nuestro servidor Postgres es implementar la Replicación. Con ello nos aseguramos que nuestro sistema esté activo el 99,9% del año.
+.
 
-- **pg_ident.conf**
+¿Qué es la Replicación?
+.
+Es la transmisión de información derivada de las operaciones DML de una Base de Datos a otra, es decir, se transmite a otra Base de Datos las instrucciones INSERT, UPDATE y DELETE que se realicen en una Base de datos de forma que ambas BBDD tengan la misma información, así pues, se obtiene una redundancia de datos.
+.
 
-La ruta de los mismos depende del sistema Operativo, para saber que que ruta están, basta con hacer una Query
+Pg_ident.conf
+.
+Permite a Postgres decir que usuario local del Sistema Operativo corresponde a qué rol de la base de datos.
+.
+|> mapname <|> system-username <|> pg-username <|
 
-**SHOW config_file**;
 
 NOTA: siempre es bueno hacer una copia original de los archivos antes de modificarlos por si movemos algo que no.
 
@@ -483,6 +521,12 @@ Reto
 - Tren
 - Viaje
 
+![image](https://user-images.githubusercontent.com/90301902/188478697-8dba44a3-3a29-4b1a-a69e-ff847be30621.png)
+
+posible ejemplo
+![image](https://user-images.githubusercontent.com/90301902/188478777-94eddde3-053b-4bec-ad47-b0e7942053d6.png)
+
+
 ### Clase 9 Tipos de Datos
 
 PostgreSQL soporta los siguientes tipos de datos
@@ -503,6 +547,10 @@ Especiales propios de postgres
 - Texto tipo bit: Cálculos en otros sistemas, ejm(hexadecimal, binario)
 XML, JSON: Postgres no permite guardar en estos formatos
 - Arreglos: Vectores y Matrices
+
+
+![image](https://user-images.githubusercontent.com/90301902/188478912-1cac8ec6-584b-47ff-97d0-cc38f137cff8.png)
+
 
 ### Clase 10 Diseñando nuestra base de datos: estructura de las tablas
 
