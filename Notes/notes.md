@@ -967,7 +967,7 @@ Damos click en next y seleccionamos los permisos que se otorgaran en este caso i
 
 Verificamos que en las otras tablas.
 
-![create_user_0](src/create_user_0.jpg)
+![image](https://user-images.githubusercontent.com/90301902/188684616-08ca63ab-253d-48ce-a965-114e51a6e2c4.png)
 
 ### Clase 15 Llaves foraneas
 
